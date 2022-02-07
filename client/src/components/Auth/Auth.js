@@ -9,7 +9,7 @@ import Icon from './icon';
 import { signin, signup } from '../../actions/auth';
 import { AUTH } from '../../constants/actionTypes';;
 import useStyles from './styles';
-import { Input } from './Input';
+import Input from './Input';
 
 const initialState = { firstName: '', lastName: '', email: '', password: '', confirmPassword: ''};
 
@@ -86,7 +86,7 @@ const SignUp = () => {
                         onFailure={googleError}
                         cookiePolicy='single_host_origin'
                     />
-                    <Grid container justify='flex-end'>
+                    <Grid container >
                         <Grid item>
                             <Button onClick={switchMode}>
                                 { isSignup ? 'Already have an account? Sign in' : 'Don\'t have an account? Sign up'}
