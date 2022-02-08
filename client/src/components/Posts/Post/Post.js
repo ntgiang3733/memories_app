@@ -81,7 +81,7 @@ const Post = ({post, setCurrentId}) => {
                             style={{color: 'white'}}
                             size='small'
                         >
-                            <MoreHorizIcon fontSize='default' />
+                            <MoreHorizIcon fontSize='medium' />
                         </Button>
                     </div>
                 )}
@@ -94,7 +94,7 @@ const Post = ({post, setCurrentId}) => {
                 </CardContent>
             </ButtonBase>
             <CardActions className={classes.cardActions}>
-                <Button size='small' color='primary' disabled={!user?.result} onlick={handleLike}>
+                <Button size='small' color='primary' disabled={!user?.result} onClick={handleLike}>
                     <Likes />
                 </Button>
                 {(user?.result?.googleId === post?.creator || user?.result?._id === post?.creator) && (
