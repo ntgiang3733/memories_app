@@ -31,7 +31,7 @@ const Form = ({ currentId, setCurrentId }) => {
             dispatch(createPost({ ...postData, name: user?.result?.name }, history));
             clear();
         } else {
-            dispath(updatePost(currentId, { ...postData, name: user?.result?.name}));
+            dispatch(updatePost(currentId, { ...postData, name: user?.result?.name}));
             clear();
         }
     };
@@ -47,7 +47,7 @@ const Form = ({ currentId, setCurrentId }) => {
     }
 
     const handleAddChip = (tag) => {
-        setPostData({ ...postData, ta0gs: [...postData.tags, tag] });
+        setPostData({ ...postData, tags: [...postData.tags, tag] });
     };
 
     const handleDeleteChip = (chipToDelete) => {
