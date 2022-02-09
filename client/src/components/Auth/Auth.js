@@ -5,11 +5,12 @@ import { useHistory } from 'react-router-dom';
 import { GoogleLogin } from 'react-google-login';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 
+import useStyles from './styles';
+import Input from './Input';
 import Icon from './icon';
 import { signin, signup } from '../../actions/auth';
 import { AUTH } from '../../constants/actionTypes';;
-import useStyles from './styles';
-import Input from './Input';
+
 
 const initialState = { firstName: '', lastName: '', email: '', password: '', confirmPassword: ''};
 
@@ -76,7 +77,7 @@ const SignUp = () => {
                         { isSignup ? 'Sign Up' : 'Sign In'}
                     </Button>
                     <GoogleLogin
-                        clientId='564033717568-bu2nr1l9h31bhk9bff4pqbenvvoju3oq.apps.googleusercontent.com'
+                        clientId='783875495698-g3jctvmhikf9ln1ijg4grl0h460863r7.apps.googleusercontent.com'
                         render={(renderProps) => (
                             <Button className={classes.googleButton} colors='primary' fullWidth onClick={renderProps.onClick} disabled={renderProps.disabled} startIcon={<Icon />} variant='contained'>
                                 Google Sign In
